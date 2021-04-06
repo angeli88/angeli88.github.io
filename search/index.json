@@ -1,1 +1,1 @@
-[]
+[{"content":"frp服务端配置 [common] bind_port = 7000 dashboard_port=7500 token=token dashboard_user=user dashboard_pwd=pwd frp客户端配置 通用配置 [common] server_addr = server_ip server_port = 7000 token = token 端口转发配置 [ssh] type = tcp local_ip = 127.0.0.1 local_port = 22 remote_port = 7001 socks5代理配置 [test_sock5] type = tcp remote_port =8010 plugin = socks5 use_encryption = true socks5配置之后，浏览器可使用proxy switchyomege插件配置socks5代理，这样就可以访问一些内网服务了。\n","date":"2021-04-06T21:56:29+08:00","permalink":"https://example.com/posts/%E8%BD%AF%E4%BB%B6/frp/","title":"frp代理访问内网"}]

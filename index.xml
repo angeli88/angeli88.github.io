@@ -6,6 +6,40 @@
         <description>Recent content on Angel Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Tue, 06 Apr 2021 21:56:29 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>frp代理访问内网</title>
+        <link>https://example.com/posts/%E8%BD%AF%E4%BB%B6/frp/</link>
+        <pubDate>Tue, 06 Apr 2021 21:56:29 +0800</pubDate>
+        
+        <guid>https://example.com/posts/%E8%BD%AF%E4%BB%B6/frp/</guid>
+        <description>&lt;h2 id=&#34;frp服务端配置&#34;&gt;frp服务端配置&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span class=&#34;k&#34;&gt;[common]&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;bind_port&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;7000&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;dashboard_port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;7500&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;token&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;token&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;dashboard_user&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;user&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;dashboard_pwd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;pwd&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;frp客户端配置&#34;&gt;frp客户端配置&lt;/h2&gt;
+&lt;h3 id=&#34;通用配置&#34;&gt;通用配置&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span class=&#34;k&#34;&gt;[common]&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;server_addr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;server_ip&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;server_port&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;7000&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;token&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;token&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;端口转发配置&#34;&gt;端口转发配置&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span class=&#34;k&#34;&gt;[ssh]&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;tcp&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;local_ip&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;127.0.0.1&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;local_port&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;22&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;remote_port&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;7001&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;socks5代理配置&#34;&gt;socks5代理配置&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span class=&#34;k&#34;&gt;[test_sock5]&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;tcp&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;remote_port&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;8010&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;plugin&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;socks5&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;use_encryption&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;socks5&lt;/code&gt;配置之后，浏览器可使用&lt;code&gt;proxy switchyomege&lt;/code&gt;插件配置&lt;code&gt;socks5&lt;/code&gt;代理，这样就可以访问一些内网服务了。&lt;/p&gt;
+</description>
+        </item>
+        
     </channel>
 </rss>
