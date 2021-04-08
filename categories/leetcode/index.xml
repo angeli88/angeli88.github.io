@@ -6,7 +6,20 @@
     <description>Recent content in leetcode on Angel Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Apr 2021 23:22:31 +0800</lastBuildDate><atom:link href="https://example.com/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Apr 2021 20:25:14 +0800</lastBuildDate><atom:link href="https://example.com/categories/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>977-有序数组的平方</title>
+      <link>https://example.com/posts/leetcode/977/</link>
+      <pubDate>Thu, 08 Apr 2021 20:25:14 +0800</pubDate>
+      
+      <guid>https://example.com/posts/leetcode/977/</guid>
+      <description>题目 给你一个按 非递减顺序 排序的整数数组 nums，返回 每个数字的平方 组成的新数组，要求也按 非递减顺序 排序。
+排序解法 所有元素平方后排序。
+时间：O(nlogn) 空间:O(n)
+class Solution { public int[] sortedSquares(int[] nums) { int len=nums.length; for(int i=0;i&amp;lt;len;i++){ nums[i]=nums[i]*nums[i]; } Arrays.sort(nums); return nums; } } 双指针 原数组为有序数组，若有负数，则数组两边均为绝对值较大的元素，双指针比较两边元素绝对值大小，大的则插入新数组右边，指针前移，当指针相遇时则完成整个过程。
+class Solution { public int[] sortedSquares(int[] nums) { int len=nums.length; int[] res=new int[len]; for(int i=0,j=len-1,pos=len-1;i&amp;lt;=j;pos--){ if(Math.abs(nums[i])&amp;gt;Math.abs(nums[j])){ res[pos]=nums[i]*nums[i]; ++i; }else{ res[pos]=nums[j]*nums[j]; --j; } } return res; } } </description>
+    </item>
+    
     <item>
       <title>面试题17.10</title>
       <link>https://example.com/posts/leetcode/%E9%9D%A2%E8%AF%95%E9%A2%981710/</link>
