@@ -2,41 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/posts/leetcode/977/</loc>
+    <loc>https://angeli88.github.io/posts/leetcode/977/</loc>
     <lastmod>2021-04-08T20:25:14+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/</loc>
+    <loc>https://angeli88.github.io/</loc>
     <lastmod>2021-04-08T20:25:14+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/categories/</loc>
+    <loc>https://angeli88.github.io/categories/</loc>
     <lastmod>2021-04-08T20:25:14+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/categories/leetcode/</loc>
+    <loc>https://angeli88.github.io/categories/leetcode/</loc>
     <lastmod>2021-04-08T20:25:14+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/posts/</loc>
+    <loc>https://angeli88.github.io/posts/</loc>
     <lastmod>2021-04-08T20:25:14+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/posts/leetcode/%E9%9D%A2%E8%AF%95%E9%A2%981710/</loc>
+    <loc>https://angeli88.github.io/posts/leetcode/%E9%9D%A2%E8%AF%95%E9%A2%981710/</loc>
     <lastmod>2021-04-06T23:22:31+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/posts/%E8%BD%AF%E4%BB%B6/frp/</loc>
+    <loc>https://angeli88.github.io/posts/%E8%BD%AF%E4%BB%B6/frp/</loc>
     <lastmod>2021-04-06T21:56:29+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/categories/%E8%BD%AF%E4%BB%B6/</loc>
+    <loc>https://angeli88.github.io/categories/%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2021-04-06T21:56:29+08:00</lastmod>
   </url><url>
-    <loc>https://example.com/archives/</loc>
+    <loc>https://angeli88.github.io/page/</loc>
+    <lastmod>2021-04-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://angeli88.github.io/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/page/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <loc>https://angeli88.github.io/%E5%85%B3%E4%BA%8E/</loc>
+    <lastmod>2021-04-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://example.com/about/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+    <loc>https://angeli88.github.io/tags/</loc>
   </url><url>
-    <loc>https://example.com/search/</loc>
-  </url><url>
-    <loc>https://example.com/tags/</loc>
+    <loc>https://angeli88.github.io/search/</loc>
   </url>
 </urlset>

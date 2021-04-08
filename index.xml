@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Angel Blog</title>
-        <link>https://example.com/</link>
-        <description>Recent content on Angel Blog</description>
+        <title>Angeli88 Blog</title>
+        <link>https://angeli88.github.io/</link>
+        <description>Recent content on Angeli88 Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 08 Apr 2021 20:25:14 +0800</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 08 Apr 2021 20:25:14 +0800</lastBuildDate><atom:link href="https://angeli88.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>977-有序数组的平方</title>
-        <link>https://example.com/posts/leetcode/977/</link>
+        <link>https://angeli88.github.io/posts/leetcode/977/</link>
         <pubDate>Thu, 08 Apr 2021 20:25:14 +0800</pubDate>
         
-        <guid>https://example.com/posts/leetcode/977/</guid>
+        <guid>https://angeli88.github.io/posts/leetcode/977/</guid>
         <description>&lt;h2 id=&#34;题目&#34;&gt;题目&lt;/h2&gt;
 &lt;p&gt;给你一个按 &lt;strong&gt;非递减顺序&lt;/strong&gt; 排序的整数数组 &lt;code&gt;nums&lt;/code&gt;，返回 &lt;strong&gt;每个数字的平方&lt;/strong&gt; 组成的新数组，要求也按 &lt;strong&gt;非递减顺序&lt;/strong&gt; 排序。&lt;/p&gt;
 &lt;h2 id=&#34;排序解法&#34;&gt;排序解法&lt;/h2&gt;
 &lt;p&gt;所有元素平方后排序。&lt;/p&gt;
-&lt;p&gt;时间：O(nlogn)   空间:O(n)&lt;/p&gt;
+&lt;p&gt;时间：$O(nlogn)$   空间:$O(n)$&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;sortedSquares&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
         &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
@@ -29,6 +29,7 @@
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;双指针&#34;&gt;双指针&lt;/h2&gt;
 &lt;p&gt;原数组为有序数组，若有负数，则数组两边均为绝对值较大的元素，双指针比较两边元素绝对值大小，大的则插入新数组右边，指针前移，当指针相遇时则完成整个过程。&lt;/p&gt;
+&lt;p&gt;时间：$O(n)$   空间：$O(1)$&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;sortedSquares&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
         &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
@@ -49,16 +50,16 @@
         </item>
         <item>
         <title>面试题17.10</title>
-        <link>https://example.com/posts/leetcode/%E9%9D%A2%E8%AF%95%E9%A2%981710/</link>
+        <link>https://angeli88.github.io/posts/leetcode/%E9%9D%A2%E8%AF%95%E9%A2%981710/</link>
         <pubDate>Tue, 06 Apr 2021 23:22:31 +0800</pubDate>
         
-        <guid>https://example.com/posts/leetcode/%E9%9D%A2%E8%AF%95%E9%A2%981710/</guid>
+        <guid>https://angeli88.github.io/posts/leetcode/%E9%9D%A2%E8%AF%95%E9%A2%981710/</guid>
         <description>&lt;h2 id=&#34;题目&#34;&gt;题目&lt;/h2&gt;
 &lt;p&gt;数组中占比超过一半的元素称之为主要元素。给定一个&lt;strong&gt;整数&lt;/strong&gt;数组，找到它的主要元素。若没有，返回-1。&lt;/p&gt;
 &lt;h2 id=&#34;题解&#34;&gt;题解&lt;/h2&gt;
 &lt;h3 id=&#34;1排序后比较中间元素&#34;&gt;1.排序后比较中间元素&lt;/h3&gt;
 &lt;p&gt;直接对数组进行排序，排序后取数组中间元素，计算其占比是否超过一半。&lt;/p&gt;
-&lt;p&gt;时间：O(nlogn)  空间：O(1)&lt;/p&gt;
+&lt;p&gt;时间：$O(nlogn)$  空间：$O(1)$&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;majorityElement&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
        &lt;span class=&#34;n&#34;&gt;Arrays&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;sort&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
@@ -79,7 +80,7 @@
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2哈希表计数&#34;&gt;2.哈希表计数&lt;/h3&gt;
 &lt;p&gt;创建一个map，将数组里每个元素的个数存储起来，再对map进行判断，若有个数大于一半的则为主要元素&lt;/p&gt;
-&lt;p&gt;时间：O(n^2)  空间:O(n)&lt;/p&gt;
+&lt;p&gt;时间：$O(n^2)$  空间:$O(n)$&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;majorityElement&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
        &lt;span class=&#34;n&#34;&gt;HashMap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hashMap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HashMap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;();&lt;/span&gt;
@@ -102,7 +103,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3摩尔投票法&#34;&gt;3.摩尔投票法&lt;/h3&gt;
 &lt;p&gt;两两抵消，若为主要元素，则其与剩下元素一一抵消之后还会有剩余元素；&lt;/p&gt;
 &lt;p&gt;设一count,从第一个元素开始，若与接下来元素不同，则count&amp;ndash;；相同则count++；当count=0时从当前元素重新开始前面的算法。如果最终count&amp;gt;0，则统计该元素个数，大于一半则为主要元素。&lt;/p&gt;
-&lt;p&gt;时间：O(n)  空间:O(1)&lt;/p&gt;
+&lt;p&gt;时间：$O(n)$  空间:$O(1)$&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Solution&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;majorityElement&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
         &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;temp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nums&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;];&lt;/span&gt;
@@ -138,10 +139,10 @@
         </item>
         <item>
         <title>frp代理访问内网</title>
-        <link>https://example.com/posts/%E8%BD%AF%E4%BB%B6/frp/</link>
+        <link>https://angeli88.github.io/posts/%E8%BD%AF%E4%BB%B6/frp/</link>
         <pubDate>Tue, 06 Apr 2021 21:56:29 +0800</pubDate>
         
-        <guid>https://example.com/posts/%E8%BD%AF%E4%BB%B6/frp/</guid>
+        <guid>https://angeli88.github.io/posts/%E8%BD%AF%E4%BB%B6/frp/</guid>
         <description>&lt;h2 id=&#34;frp服务端配置&#34;&gt;frp服务端配置&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span class=&#34;k&#34;&gt;[common]&lt;/span&gt;
 &lt;span class=&#34;na&#34;&gt;bind_port&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;7000&lt;/span&gt;

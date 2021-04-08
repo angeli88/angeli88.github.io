@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>软件 on Angel Blog</title>
-    <link>https://example.com/categories/%E8%BD%AF%E4%BB%B6/</link>
-    <description>Recent content in 软件 on Angel Blog</description>
+    <title>软件 on Angeli88 Blog</title>
+    <link>https://angeli88.github.io/categories/%E8%BD%AF%E4%BB%B6/</link>
+    <description>Recent content in 软件 on Angeli88 Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Apr 2021 21:56:29 +0800</lastBuildDate><atom:link href="https://example.com/categories/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Apr 2021 21:56:29 +0800</lastBuildDate><atom:link href="https://angeli88.github.io/categories/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>frp代理访问内网</title>
-      <link>https://example.com/posts/%E8%BD%AF%E4%BB%B6/frp/</link>
+      <link>https://angeli88.github.io/posts/%E8%BD%AF%E4%BB%B6/frp/</link>
       <pubDate>Tue, 06 Apr 2021 21:56:29 +0800</pubDate>
       
-      <guid>https://example.com/posts/%E8%BD%AF%E4%BB%B6/frp/</guid>
+      <guid>https://angeli88.github.io/posts/%E8%BD%AF%E4%BB%B6/frp/</guid>
       <description>frp服务端配置 [common] bind_port = 7000 dashboard_port=7500 token=token dashboard_user=user dashboard_pwd=pwd frp客户端配置 通用配置 [common] server_addr = server_ip server_port = 7000 token = token 端口转发配置 [ssh] type = tcp local_ip = 127.0.0.1 local_port = 22 remote_port = 7001 socks5代理配置 [test_sock5] type = tcp remote_port =8010 plugin = socks5 use_encryption = true socks5配置之后，浏览器可使用proxy switchyomege插件配置socks5代理，这样就可以访问一些内网服务了。</description>
     </item>
     
