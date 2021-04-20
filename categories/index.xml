@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Angeli88 Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Apr 2021 20:25:14 +0800</lastBuildDate><atom:link href="https://angeli88.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Apr 2021 19:48:43 +0800</lastBuildDate><atom:link href="https://angeli88.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ubuntu</title>
+      <link>https://angeli88.github.io/categories/ubuntu/</link>
+      <pubDate>Tue, 20 Apr 2021 19:48:43 +0800</pubDate>
+      
+      <guid>https://angeli88.github.io/categories/ubuntu/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>leetcode</title>
       <link>https://angeli88.github.io/categories/leetcode/</link>

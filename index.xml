@@ -6,7 +6,103 @@
         <description>Recent content on Angeli88 Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 08 Apr 2021 20:25:14 +0800</lastBuildDate><atom:link href="https://angeli88.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 20 Apr 2021 19:48:43 +0800</lastBuildDate><atom:link href="https://angeli88.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>ubuntu18.04 使用虚拟显示器</title>
+        <link>https://angeli88.github.io/posts/ubuntu/virtualdisplay/</link>
+        <pubDate>Tue, 20 Apr 2021 19:48:43 +0800</pubDate>
+        
+        <guid>https://angeli88.github.io/posts/ubuntu/virtualdisplay/</guid>
+        <description>&lt;h2 id=&#34;遇到问题&#34;&gt;遇到问题&lt;/h2&gt;
+&lt;p&gt;远程电脑显示器关闭后，重启电脑，teamviewer连接会显示黑屏。&lt;/p&gt;
+&lt;h2 id=&#34;解决方法&#34;&gt;解决方法&lt;/h2&gt;
+&lt;h3 id=&#34;主机情况&#34;&gt;主机情况&lt;/h3&gt;
+&lt;p&gt;系统：Ubuntu 18.04&lt;/p&gt;
+&lt;p&gt;显卡：Intel核显&lt;/p&gt;
+&lt;h3 id=&#34;安装软件&#34;&gt;安装软件&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 因为ubuntu版本为18.04，故安装18.04版本的软件&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# 可用sudo apt search 软件名搜索所有版本，选择与系统相应的版本即可&lt;/span&gt;
+sudo apt install  xserver-xorg-core-hwe-18.04
+sudo apt install  xserver-xorg-video-dummy-hwe-18.04  --fix-missing
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;修改配置文件会默认使用虚拟显示器&#34;&gt;修改配置文件(会默认使用虚拟显示器)&lt;/h3&gt;
+&lt;p&gt;配置文件为&lt;code&gt;/usr/share/X11/xorg.conf.d/xorg.conf&lt;/code&gt;,修改文件内容如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Section &lt;span class=&#34;s2&#34;&gt;&amp;#34;Monitor&amp;#34;&lt;/span&gt;
+  Identifier &lt;span class=&#34;s2&#34;&gt;&amp;#34;Monitor0&amp;#34;&lt;/span&gt;
+  HorizSync 28.0-80.0
+  VertRefresh 48.0-75.0
+  &lt;span class=&#34;c1&#34;&gt;# https://arachnoid.com/modelines/&lt;/span&gt;
+  &lt;span class=&#34;c1&#34;&gt;# 1920x1080 @ 60.00 Hz (GTF) hsync: 67.08 kHz; pclk: 172.80 MHz&lt;/span&gt;
+  Modeline &lt;span class=&#34;s2&#34;&gt;&amp;#34;1920x1080_60.00&amp;#34;&lt;/span&gt; 172.80 &lt;span class=&#34;m&#34;&gt;1920&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2040&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2248&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2576&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1080&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1081&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1084&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1118&lt;/span&gt; -HSync +Vsync
+EndSection
+
+Section &lt;span class=&#34;s2&#34;&gt;&amp;#34;Device&amp;#34;&lt;/span&gt;
+  Identifier &lt;span class=&#34;s2&#34;&gt;&amp;#34;Card0&amp;#34;&lt;/span&gt;
+  Driver &lt;span class=&#34;s2&#34;&gt;&amp;#34;dummy&amp;#34;&lt;/span&gt;
+  VideoRam &lt;span class=&#34;m&#34;&gt;256000&lt;/span&gt;
+EndSection
+
+Section &lt;span class=&#34;s2&#34;&gt;&amp;#34;Screen&amp;#34;&lt;/span&gt;
+  DefaultDepth &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt;
+  Identifier &lt;span class=&#34;s2&#34;&gt;&amp;#34;Screen0&amp;#34;&lt;/span&gt;
+  Device &lt;span class=&#34;s2&#34;&gt;&amp;#34;Card0&amp;#34;&lt;/span&gt;
+  Monitor &lt;span class=&#34;s2&#34;&gt;&amp;#34;Monitor0&amp;#34;&lt;/span&gt;
+  SubSection &lt;span class=&#34;s2&#34;&gt;&amp;#34;Display&amp;#34;&lt;/span&gt;
+    Depth &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt;
+    Modes &lt;span class=&#34;s2&#34;&gt;&amp;#34;1920x1080_60.00&amp;#34;&lt;/span&gt;
+  EndSubSection
+EndSection
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;保存后&lt;strong&gt;重启系统&lt;/strong&gt;即可，使用teamviewer连接就可以看到图形界面了。&lt;/p&gt;
+&lt;h3 id=&#34;查看显示器信息&#34;&gt;查看显示器信息&lt;/h3&gt;
+&lt;p&gt;输入 &lt;code&gt;xranr&lt;/code&gt;命令即可查看。&lt;/p&gt;
+&lt;p&gt;显示器信息如下所示：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;xrandr: Failed to get size of gamma &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; output default
+Screen 0: minimum &lt;span class=&#34;m&#34;&gt;320&lt;/span&gt; x 240, current &lt;span class=&#34;m&#34;&gt;1920&lt;/span&gt; x 1080, maximum &lt;span class=&#34;m&#34;&gt;1920&lt;/span&gt; x &lt;span class=&#34;m&#34;&gt;1080&lt;/span&gt;
+default connected primary 1920x1080+0+0 0mm x 0mm
+   1920x1080     60.00*
+   1680x1050     70.00    60.00
+   1400x1050     70.00    60.00
+   1600x900      60.00
+   1280x1024     75.00    60.00
+   1440x900      60.00
+   1400x900      60.00
+   1280x960      60.00
+   1368x768      60.00
+   1360x768      60.00
+   1280x800      60.00
+   1152x864      75.00    70.00    60.00
+   1280x720      60.00
+   1024x768      75.00    70.00    60.00
+   1024x576      60.00
+   960x600       60.00
+   832x624       75.00
+   960x540       60.00
+   800x600       75.00    72.00    60.00    56.00
+   840x525       70.00    60.00
+   864x486       60.00
+   700x525       70.00    60.00
+   800x450       60.00
+   640x512       75.00    60.00
+   720x450       60.00
+   700x450       60.00
+   640x480       75.00    73.00    60.00
+   684x384       60.00
+   680x384       60.00
+   640x400       60.00
+   576x432       75.00    70.00    60.00
+   640x360       60.00
+   512x384       75.00    70.00    60.00
+   512x288       60.00
+   416x312       75.00
+   480x270       60.00
+   400x300       75.00    72.00    60.00    56.00
+   432x243       60.00
+   320x240       75.00    73.00    60.00
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意事项&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;cannot open display&amp;quot;报错：export DISPLAY=:0.0即可&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>977-有序数组的平方</title>
         <link>https://angeli88.github.io/posts/leetcode/977/</link>
         <pubDate>Thu, 08 Apr 2021 20:25:14 +0800</pubDate>

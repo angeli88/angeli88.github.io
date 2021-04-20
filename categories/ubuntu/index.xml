@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ubuntu on Angeli88 Blog</title>
+    <link>https://angeli88.github.io/categories/ubuntu/</link>
+    <description>Recent content in ubuntu on Angeli88 Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Apr 2021 19:48:43 +0800</lastBuildDate><atom:link href="https://angeli88.github.io/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ubuntu18.04 使用虚拟显示器</title>
+      <link>https://angeli88.github.io/posts/ubuntu/virtualdisplay/</link>
+      <pubDate>Tue, 20 Apr 2021 19:48:43 +0800</pubDate>
+      
+      <guid>https://angeli88.github.io/posts/ubuntu/virtualdisplay/</guid>
+      <description>遇到问题 远程电脑显示器关闭后，重启电脑，teamviewer连接会显示黑屏。
+解决方法 主机情况 系统：Ubuntu 18.04
+显卡：Intel核显
+安装软件 # 因为ubuntu版本为18.04，故安装18.04版本的软件 # 可用sudo apt search 软件名搜索所有版本，选择与系统相应的版本即可 sudo apt install xserver-xorg-core-hwe-18.04 sudo apt install xserver-xorg-video-dummy-hwe-18.04 --fix-missing 修改配置文件(会默认使用虚拟显示器) 配置文件为/usr/share/X11/xorg.conf.d/xorg.conf,修改文件内容如下：
+Section &amp;#34;Monitor&amp;#34; Identifier &amp;#34;Monitor0&amp;#34; HorizSync 28.0-80.0 VertRefresh 48.0-75.0 # https://arachnoid.com/modelines/ # 1920x1080 @ 60.00 Hz (GTF) hsync: 67.08 kHz; pclk: 172.80 MHz Modeline &amp;#34;1920x1080_60.00&amp;#34; 172.80 1920 2040 2248 2576 1080 1081 1084 1118 -HSync +Vsync EndSection Section &amp;#34;Device&amp;#34; Identifier &amp;#34;Card0&amp;#34; Driver &amp;#34;dummy&amp;#34; VideoRam 256000 EndSection Section &amp;#34;Screen&amp;#34; DefaultDepth 24 Identifier &amp;#34;Screen0&amp;#34; Device &amp;#34;Card0&amp;#34; Monitor &amp;#34;Monitor0&amp;#34; SubSection &amp;#34;Display&amp;#34; Depth 24 Modes &amp;#34;1920x1080_60.</description>
+    </item>
+    
+  </channel>
+</rss>
