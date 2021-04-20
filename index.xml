@@ -100,6 +100,9 @@ default connected primary 1920x1080+0+0 0mm x 0mm
 &lt;p&gt;&lt;strong&gt;注意事项&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&amp;ldquo;cannot open display&amp;quot;报错：export DISPLAY=:0.0即可&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h2 id=&#34;参考链接&#34;&gt;参考链接&lt;/h2&gt;
+&lt;p&gt;1.&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/qq_29757283/article/details/102604431&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;【LINUX】（Ubuntu）无显示器接入，使用虚拟显示器且远程控制_「熊猫系列项目」ing-CSDN博客_ubuntu虚拟显示器&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
