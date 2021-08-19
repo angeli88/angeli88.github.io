@@ -6,7 +6,19 @@
     <description>Recent content in Posts on Angeli88 Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Apr 2021 19:48:43 +0800</lastBuildDate><atom:link href="https://angeli88.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Aug 2021 19:52:11 +0800</lastBuildDate><atom:link href="https://angeli88.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring boot本地依赖打包</title>
+      <link>https://angeli88.github.io/posts/java/springboot%E6%89%93%E5%8C%85%E6%9C%AC%E5%9C%B0%E4%BE%9D%E8%B5%96/</link>
+      <pubDate>Thu, 19 Aug 2021 19:52:11 +0800</pubDate>
+      
+      <guid>https://angeli88.github.io/posts/java/springboot%E6%89%93%E5%8C%85%E6%9C%AC%E5%9C%B0%E4%BE%9D%E8%B5%96/</guid>
+      <description>maven 项目导入本地jar包 将jar文件放在项目根目录下的lib目录下
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.github.everit-org.json-schema&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;org.everit.json.schema&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.13.0&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;system&amp;lt;/scope&amp;gt; &amp;lt;!-- 指定为本地jar包 --&amp;gt; &amp;lt;systemPath&amp;gt;${project.basedir}/lib/org.everit.json.schema-1.13.0.jar&amp;lt;/systemPath&amp;gt; &amp;lt;!-- 设置本地jar包目录 --&amp;gt; &amp;lt;/dependency&amp;gt; springboot将本地库一起打包 只需配置一下springboot打包插件,配置如下所示，注意：依赖的jar包命名一定是{artifactId}-{version}的格式。
+&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;includeSystemScope&amp;gt;true&amp;lt;/includeSystemScope&amp;gt; &amp;lt;/configuration&amp;gt; maven 将依赖一起打包 在pom文件中引入maven-assembly-plugin插件，配置如下，再执行mvn package命令便会将依赖和项目一起打包，打包出的jar文件后缀为jar-with-dependencies。
+&amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;maven-assembly-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.0.0&amp;lt;/version&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;archive&amp;gt; &amp;lt;manifest&amp;gt; &amp;lt;mainClass&amp;gt;&amp;lt;/mainClass&amp;gt; &amp;lt;/manifest&amp;gt; &amp;lt;/archive&amp;gt; &amp;lt;descriptorRefs&amp;gt; &amp;lt;descriptorRef&amp;gt;jar-with-dependencies&amp;lt;/descriptorRef&amp;gt; &amp;lt;/descriptorRefs&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;executions&amp;gt; &amp;lt;execution&amp;gt; &amp;lt;id&amp;gt;make-assembly&amp;lt;/id&amp;gt; &amp;lt;!-- this is used for inheritance merges --&amp;gt; &amp;lt;phase&amp;gt;package&amp;lt;/phase&amp;gt; &amp;lt;!-- 指定在打包节点执行jar包合并操作 --&amp;gt; &amp;lt;goals&amp;gt; &amp;lt;goal&amp;gt;single&amp;lt;/goal&amp;gt; &amp;lt;/goals&amp;gt; &amp;lt;/execution&amp;gt; &amp;lt;/executions&amp;gt; &amp;lt;/plugin&amp;gt; </description>
+    </item>
+    
     <item>
       <title>ubuntu18.04 使用虚拟显示器</title>
       <link>https://angeli88.github.io/posts/ubuntu/virtualdisplay/</link>
