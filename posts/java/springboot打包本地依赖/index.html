@@ -203,14 +203,14 @@
 
 
 
-        <time class="article-time--published">Aug 19, 2021</time>
+        <time class="article-time--published">2021-08-19</time>
     </footer></div>
 </header>
 
     <section class="article-content">
     <h2 id="maven-项目导入本地jar包">maven 项目导入本地jar包</h2>
 <p>将<code>jar</code>文件放在项目根目录下的<code>lib</code>目录下</p>
-<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependency&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>com.github.everit-org.json-schema<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>org.everit.json.schema<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;version&gt;</span>1.13.0<span class="nt">&lt;/version&gt;</span>
@@ -219,14 +219,14 @@
 <span class="nt">&lt;/dependency&gt;</span>
 </code></pre></div><h2 id="springboot将本地库一起打包">springboot将本地库一起打包</h2>
 <p>只需配置一下<code>springboot</code>打包插件,配置如下所示，注意：依赖的jar包命名一定是{artifactId}-{version}的格式。</p>
-<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
 <span class="nt">&lt;artifactId&gt;</span>spring-boot-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
 <span class="nt">&lt;configuration&gt;</span>
     <span class="nt">&lt;includeSystemScope&gt;</span>true<span class="nt">&lt;/includeSystemScope&gt;</span>
 <span class="nt">&lt;/configuration&gt;</span>
 </code></pre></div><h2 id="maven-将依赖一起打包">maven 将依赖一起打包</h2>
 <p>在<code>pom</code>文件中引入<code>maven-assembly-plugin</code>插件，配置如下，再执行<code>mvn package</code>命令便会将依赖和项目一起打包，打包出的<code>jar</code>文件后缀为<code>jar-with-dependencies</code>。</p>
-<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
     <span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
     <span class="nt">&lt;artifactId&gt;</span>maven-assembly-plugin<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;version&gt;</span>3.0.0<span class="nt">&lt;/version&gt;</span>

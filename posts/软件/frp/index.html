@@ -199,13 +199,13 @@
 
 
 
-        <time class="article-time--published">Apr 06, 2021</time>
+        <time class="article-time--published">2021-04-06</time>
     </footer></div>
 </header>
 
     <section class="article-content">
     <h2 id="frp服务端配置">frp服务端配置</h2>
-<div class="highlight"><pre class="chroma"><code class="language-ini" data-lang="ini"><span class="k">[common]</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="k">[common]</span>
 <span class="na">bind_port</span> <span class="o">=</span> <span class="s">7000</span>
 <span class="na">dashboard_port</span><span class="o">=</span><span class="s">7500</span>
 <span class="na">token</span><span class="o">=</span><span class="s">token</span>
@@ -213,18 +213,18 @@
 <span class="na">dashboard_pwd</span><span class="o">=</span><span class="s">pwd</span>
 </code></pre></div><h2 id="frp客户端配置">frp客户端配置</h2>
 <h3 id="通用配置">通用配置</h3>
-<div class="highlight"><pre class="chroma"><code class="language-ini" data-lang="ini"><span class="k">[common]</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="k">[common]</span>
 <span class="na">server_addr</span> <span class="o">=</span> <span class="s">server_ip</span>
 <span class="na">server_port</span> <span class="o">=</span> <span class="s">7000</span>
 <span class="na">token</span> <span class="o">=</span> <span class="s">token</span>
 </code></pre></div><h3 id="端口转发配置">端口转发配置</h3>
-<div class="highlight"><pre class="chroma"><code class="language-ini" data-lang="ini"><span class="k">[ssh]</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="k">[ssh]</span>
 <span class="na">type</span> <span class="o">=</span> <span class="s">tcp</span>
 <span class="na">local_ip</span> <span class="o">=</span> <span class="s">127.0.0.1</span>
 <span class="na">local_port</span> <span class="o">=</span> <span class="s">22</span>
 <span class="na">remote_port</span> <span class="o">=</span> <span class="s">7001</span>
 </code></pre></div><h3 id="socks5代理配置">socks5代理配置</h3>
-<div class="highlight"><pre class="chroma"><code class="language-ini" data-lang="ini"><span class="k">[test_sock5]</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="k">[test_sock5]</span>
 <span class="na">type</span> <span class="o">=</span> <span class="s">tcp</span>
 <span class="na">remote_port</span> <span class="o">=</span><span class="s">8010</span>
 <span class="na">plugin</span> <span class="o">=</span> <span class="s">socks5</span>

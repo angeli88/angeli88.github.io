@@ -199,7 +199,7 @@
 
 
 
-        <time class="article-time--published">Apr 20, 2021</time>
+        <time class="article-time--published">2021-04-20</time>
     </footer></div>
 </header>
 
@@ -211,13 +211,13 @@
 <p>系统：Ubuntu 18.04</p>
 <p>显卡：Intel核显</p>
 <h3 id="安装软件">安装软件</h3>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 因为ubuntu版本为18.04，故安装18.04版本的软件</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 因为ubuntu版本为18.04，故安装18.04版本的软件</span>
 <span class="c1"># 可用sudo apt search 软件名搜索所有版本，选择与系统相应的版本即可</span>
 sudo apt install  xserver-xorg-core-hwe-18.04
 sudo apt install  xserver-xorg-video-dummy-hwe-18.04  --fix-missing
 </code></pre></div><h3 id="修改配置文件会默认使用虚拟显示器">修改配置文件(会默认使用虚拟显示器)</h3>
 <p>配置文件为<code>/usr/share/X11/xorg.conf.d/xorg.conf</code>,修改文件内容如下：</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">Section <span class="s2">&#34;Monitor&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">Section <span class="s2">&#34;Monitor&#34;</span>
   Identifier <span class="s2">&#34;Monitor0&#34;</span>
   HorizSync 28.0-80.0
   VertRefresh 48.0-75.0
@@ -246,7 +246,7 @@ EndSection
 <h3 id="查看显示器信息">查看显示器信息</h3>
 <p>输入 <code>xranr</code>命令即可查看。</p>
 <p>显示器信息如下所示：</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">xrandr: Failed to get size of gamma <span class="k">for</span> output default
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">xrandr: Failed to get size of gamma <span class="k">for</span> output default
 Screen 0: minimum <span class="m">320</span> x 240, current <span class="m">1920</span> x 1080, maximum <span class="m">1920</span> x <span class="m">1080</span>
 default connected primary 1920x1080+0+0 0mm x 0mm
    1920x1080     60.00*
